@@ -28,6 +28,7 @@ services:
       - N8N_BASIC_AUTH_PASSWORD=${N8N_PSSWD}
     volumes:
       - n8n_data:/home/node/.n8n  # Persist workflows
+      - /home/tvrck/Development/Projects/tavarock-landing:/app/landing_base
     depends_on:
       - ollama
     restart: unless-stopped
